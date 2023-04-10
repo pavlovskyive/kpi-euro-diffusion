@@ -23,6 +23,7 @@
 		7967C41729E468B90074E426 /* DiffusionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7967C41629E468B90074E426 /* DiffusionManager.swift */; };
 		7967C41B29E46BFE0074E426 /* EuroDiffusionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7967C41A29E46BFE0074E426 /* EuroDiffusionViewModel.swift */; };
 		7967C41D29E46C360074E426 /* DiffusionCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7967C41C29E46C360074E426 /* DiffusionCoder.swift */; };
+		7967C41F29E483470074E426 /* ErrorStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7967C41E29E483470074E426 /* ErrorStrings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		7967C41629E468B90074E426 /* DiffusionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffusionManager.swift; sourceTree = "<group>"; };
 		7967C41A29E46BFE0074E426 /* EuroDiffusionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EuroDiffusionViewModel.swift; sourceTree = "<group>"; };
 		7967C41C29E46C360074E426 /* DiffusionCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffusionCoder.swift; sourceTree = "<group>"; };
+		7967C41E29E483470074E426 /* ErrorStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorStrings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 				7967C41629E468B90074E426 /* DiffusionManager.swift */,
 				7967C41A29E46BFE0074E426 /* EuroDiffusionViewModel.swift */,
 				7967C41C29E46C360074E426 /* DiffusionCoder.swift */,
+				7967C41E29E483470074E426 /* ErrorStrings.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7967C41B29E46BFE0074E426 /* EuroDiffusionViewModel.swift in Sources */,
+				7967C41F29E483470074E426 /* ErrorStrings.swift in Sources */,
 				7967C41729E468B90074E426 /* DiffusionManager.swift in Sources */,
 				790FCBC829CB27FF00EB936E /* ActionItem.swift in Sources */,
 				790FCB9C29C9B8E800EB936E /* ContentView.swift in Sources */,

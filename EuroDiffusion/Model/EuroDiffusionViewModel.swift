@@ -17,7 +17,7 @@ class EuroDiffusionViewModel: ObservableObject {
     func processDiffusion() {
         let managers = diffusionCoder.decode(input)
         guard !managers.isEmpty else {
-            result = "There was an error with your input.\nPlease, recheck it and try again."
+            result = ErrorStrings.invalidInput
             
             return
         }
