@@ -7,9 +7,11 @@
 
 import SwiftUI
 
+/// A view that displays the Euro Diffusion application's user interface.
 struct ContentView: View {
     @ObservedObject var viewModel = EuroDiffusionViewModel()
     
+    /// The view's body that displays a vertical stack of the edit views.
     var body: some View {
         VStack {
             editViews
@@ -20,6 +22,10 @@ struct ContentView: View {
 }
 
 private extension ContentView {
+    /**
+    The view that displays the input view, the process button,
+    and the output view in a horizontal stack.
+    */
     var editViews: some View {
         HStack(spacing: 16) {
             inputView
@@ -30,6 +36,7 @@ private extension ContentView {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
     
+    /// The view that displays the input text area and its associated buttons.
     var inputView: some View {
         EditView(
             text: $viewModel.input,
@@ -49,6 +56,7 @@ private extension ContentView {
         )
     }
     
+    /// The view that displays the output text area and its associated buttons.
     var outputView: some View {
         EditView(
             text: $viewModel.result,
@@ -63,6 +71,7 @@ private extension ContentView {
         )
     }
     
+    /// The view that displays the "Process" button that starts the simulation.
     var processButton: some View {
         Button(action: handleCompute) {
             HStack(spacing: 5) {
@@ -82,6 +91,7 @@ private extension ContentView {
 }
 
 private extension ContentView {
+    /// Handles the selection of a file by opening a file selector dialog.
     func handleSelectFile() {
         let panel = NSOpenPanel()
 
@@ -95,6 +105,7 @@ private extension ContentView {
         processURL(panel.url)
     }
     
+    /// Handles url that contains the path for the input file's location.
     func processURL(_ url: URL?) {
         guard
             let url,
@@ -106,10 +117,11 @@ private extension ContentView {
         viewModel.input = contents
     }
     
+    /// Initiates system's dialogue to save string as .txt file.
     func saveStringToFile(_ string: String) {
         let panel = NSSavePanel()
         panel.title = "Save Text File"
-        panel.allowedFileTypes = ["txt"]
+        panel.allowedContentTypes = [.plainText]
         panel.nameFieldStringValue = "Untitled.txt"
 
         guard panel.runModal() == .OK, let url = panel.url else {
@@ -124,6 +136,7 @@ private extension ContentView {
         }
     }
     
+    /// Commands viewModel to run the simulation of diffusion with the given input.
     func handleCompute() {
         viewModel.processDiffusion()
     }
