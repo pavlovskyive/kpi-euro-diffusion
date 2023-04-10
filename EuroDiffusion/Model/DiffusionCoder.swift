@@ -37,7 +37,8 @@ struct DiffusionCoder {
                 guard
                     [minX, minY].allSatisfy({ $0 > 0 }),
                     minX <= maxX,
-                    minY <= maxY
+                    minY <= maxY,
+                    [maxX, maxY].allSatisfy({ $0 <= DiffusionConfig.gridSize })
                 else {
                     return []
                 }
@@ -59,7 +60,7 @@ struct DiffusionCoder {
         var resultingString = ""
         
         guard !results.isEmpty else {
-            return "There was an error with your input.\nPlease, recheck it and try again."
+            return ErrorStrings.invalidInput
         }
 
         for (caseNumber, result) in results.enumerated() {
