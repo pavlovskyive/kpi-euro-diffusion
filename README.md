@@ -1,8 +1,13 @@
 # Euro Diffusion
 
-Task for uni soft-dev classes.
-Solution is fast-written, just to satisfy the assignment.
-Don't judge my programming skills based on this :)
+*Note:*
+
+*Task for uni soft-dev classes.*
+
+*Solution is fast-written, just to satisfy the assignment.*
+
+*Don't judge my programming skills based on this :)*
+
 
 ### Formulation on the problem
 
@@ -70,14 +75,17 @@ Belgium 1 1 2 2
 
 Output:
 ```
-Case Number 1
-Spain 382 
-Portugal 416 
-France 1325 
-Case Number 2 
-Luxembourg 0 
-Case Number 3 
-Belgium 2 
+Case number 1
+France 1325
+Spain 382
+Portugal 416
+Case number 2
+Luxembourg 1
+Case number 3
 Netherlands 2
-
+Belgium 2
 ```
+
+# Screenshots
+
+![screenshot](https://github.com/pavlovskyive/kpi-euro-diffusion/blob/main/screenshot.png)
