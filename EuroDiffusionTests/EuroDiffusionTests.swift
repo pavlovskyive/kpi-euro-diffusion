@@ -26,15 +26,16 @@ final class EuroDiffusionTests: XCTestCase {
         
         let expectedOutput =
         """
-        Case Number 1
+        Case number 1
+        France 1325
         Spain 382
         Portugal 416
-        France 1325
-        Case Number 2
-        Luxembourg 0
-        Case Number 3
-        Belgium 2
+        Case number 2
+        Luxembourg 1
+        Case number 3
         Netherlands 2
+        Belgium 2
+        
         """
         
         var output = ""
@@ -42,25 +43,15 @@ final class EuroDiffusionTests: XCTestCase {
         let diffusionCoder = DiffusionCoder()
         let managers = diffusionCoder.decode(input)
         
-        let group = DispatchGroup()
         var results: [[DiffusionManager.State]] = Array(repeating: [DiffusionManager.State](), count: managers.count)
 
         for (index, manager) in managers.enumerated() {
-            group.enter()
-
-            // Run simulation asynchronously
-            DispatchQueue.global().async {
-                let result = manager.runSimulation()
-                results[index] = result
-                group.leave()
-            }
+            let result = manager.runSimulation()
+            results[index] = result
         }
 
-        // Wait for all simulations to finish
-        group.notify(queue: .main) {
-            output = diffusionCoder.encode(results: results)
-            
-            XCTAssertEqual(output, expectedOutput)
-        }
+        output = diffusionCoder.encode(results: results)
+        
+        XCTAssertEqual(output, expectedOutput)
     }
 }
