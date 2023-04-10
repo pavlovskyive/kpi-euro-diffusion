@@ -1,0 +1,665 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		790FCB9A29C9B8E800EB936E /* EuroDiffusionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790FCB9929C9B8E800EB936E /* EuroDiffusionApp.swift */; };
+		790FCB9C29C9B8E800EB936E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790FCB9B29C9B8E800EB936E /* ContentView.swift */; };
+		790FCB9E29C9B8E900EB936E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 790FCB9D29C9B8E900EB936E /* Assets.xcassets */; };
+		790FCBA129C9B8E900EB936E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 790FCBA029C9B8E900EB936E /* Preview Assets.xcassets */; };
+		790FCBAC29C9B8EA00EB936E /* EuroDiffusionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790FCBAB29C9B8EA00EB936E /* EuroDiffusionTests.swift */; };
+		790FCBB629C9B8EA00EB936E /* EuroDiffusionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790FCBB529C9B8EA00EB936E /* EuroDiffusionUITests.swift */; };
+		790FCBB829C9B8EA00EB936E /* EuroDiffusionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790FCBB729C9B8EA00EB936E /* EuroDiffusionUITestsLaunchTests.swift */; };
+		790FCBC529CB26A000EB936E /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790FCBC429CB26A000EB936E /* EditView.swift */; };
+		790FCBC829CB27FF00EB936E /* ActionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790FCBC729CB27FF00EB936E /* ActionItem.swift */; };
+		7967C40E29E467230074E426 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7967C40D29E467230074E426 /* Config.swift */; };
+		7967C41129E467470074E426 /* Collection+SafeSubscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7967C41029E467470074E426 /* Collection+SafeSubscript.swift */; };
+		7967C41329E467C20074E426 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7967C41229E467C20074E426 /* City.swift */; };
+		7967C41529E4680B0074E426 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7967C41429E4680B0074E426 /* Country.swift */; };
+		7967C41729E468B90074E426 /* DiffusionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7967C41629E468B90074E426 /* DiffusionManager.swift */; };
+		7967C41B29E46BFE0074E426 /* EuroDiffusionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7967C41A29E46BFE0074E426 /* EuroDiffusionViewModel.swift */; };
+		7967C41D29E46C360074E426 /* DiffusionCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7967C41C29E46C360074E426 /* DiffusionCoder.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		790FCBA829C9B8EA00EB936E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 790FCB8E29C9B8E800EB936E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 790FCB9529C9B8E800EB936E;
+			remoteInfo = EuroDiffusion;
+		};
+		790FCBB229C9B8EA00EB936E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 790FCB8E29C9B8E800EB936E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 790FCB9529C9B8E800EB936E;
+			remoteInfo = EuroDiffusion;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		790FCB9629C9B8E800EB936E /* EuroDiffusion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EuroDiffusion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		790FCB9929C9B8E800EB936E /* EuroDiffusionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EuroDiffusionApp.swift; sourceTree = "<group>"; };
+		790FCB9B29C9B8E800EB936E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		790FCB9D29C9B8E900EB936E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		790FCBA029C9B8E900EB936E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		790FCBA229C9B8E900EB936E /* EuroDiffusion.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EuroDiffusion.entitlements; sourceTree = "<group>"; };
+		790FCBA729C9B8EA00EB936E /* EuroDiffusionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EuroDiffusionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		790FCBAB29C9B8EA00EB936E /* EuroDiffusionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EuroDiffusionTests.swift; sourceTree = "<group>"; };
+		790FCBB129C9B8EA00EB936E /* EuroDiffusionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EuroDiffusionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		790FCBB529C9B8EA00EB936E /* EuroDiffusionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EuroDiffusionUITests.swift; sourceTree = "<group>"; };
+		790FCBB729C9B8EA00EB936E /* EuroDiffusionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EuroDiffusionUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		790FCBC429CB26A000EB936E /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		790FCBC729CB27FF00EB936E /* ActionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionItem.swift; sourceTree = "<group>"; };
+		7967C40D29E467230074E426 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		7967C41029E467470074E426 /* Collection+SafeSubscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+SafeSubscript.swift"; sourceTree = "<group>"; };
+		7967C41229E467C20074E426 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		7967C41429E4680B0074E426 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		7967C41629E468B90074E426 /* DiffusionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffusionManager.swift; sourceTree = "<group>"; };
+		7967C41A29E46BFE0074E426 /* EuroDiffusionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EuroDiffusionViewModel.swift; sourceTree = "<group>"; };
+		7967C41C29E46C360074E426 /* DiffusionCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffusionCoder.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		790FCB9329C9B8E800EB936E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		790FCBA429C9B8EA00EB936E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		790FCBAE29C9B8EA00EB936E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		790FCB8D29C9B8E800EB936E = {
+			isa = PBXGroup;
+			children = (
+				790FCB9829C9B8E800EB936E /* EuroDiffusion */,
+				790FCBAA29C9B8EA00EB936E /* EuroDiffusionTests */,
+				790FCBB429C9B8EA00EB936E /* EuroDiffusionUITests */,
+				790FCB9729C9B8E800EB936E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		790FCB9729C9B8E800EB936E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				790FCB9629C9B8E800EB936E /* EuroDiffusion.app */,
+				790FCBA729C9B8EA00EB936E /* EuroDiffusionTests.xctest */,
+				790FCBB129C9B8EA00EB936E /* EuroDiffusionUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		790FCB9829C9B8E800EB936E /* EuroDiffusion */ = {
+			isa = PBXGroup;
+			children = (
+				7967C40F29E4672F0074E426 /* Helper */,
+				7967C40B29E465D10074E426 /* Model */,
+				7967C40A29E465BA0074E426 /* View */,
+				7967C40929E465B30074E426 /* App */,
+				7967C40C29E465DF0074E426 /* Resources */,
+				790FCB9F29C9B8E900EB936E /* Preview Content */,
+			);
+			path = EuroDiffusion;
+			sourceTree = "<group>";
+		};
+		790FCB9F29C9B8E900EB936E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				790FCBA029C9B8E900EB936E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		790FCBAA29C9B8EA00EB936E /* EuroDiffusionTests */ = {
+			isa = PBXGroup;
+			children = (
+				790FCBAB29C9B8EA00EB936E /* EuroDiffusionTests.swift */,
+			);
+			path = EuroDiffusionTests;
+			sourceTree = "<group>";
+		};
+		790FCBB429C9B8EA00EB936E /* EuroDiffusionUITests */ = {
+			isa = PBXGroup;
+			children = (
+				790FCBB529C9B8EA00EB936E /* EuroDiffusionUITests.swift */,
+				790FCBB729C9B8EA00EB936E /* EuroDiffusionUITestsLaunchTests.swift */,
+			);
+			path = EuroDiffusionUITests;
+			sourceTree = "<group>";
+		};
+		790FCBC629CB27F300EB936E /* EditView */ = {
+			isa = PBXGroup;
+			children = (
+				790FCBC429CB26A000EB936E /* EditView.swift */,
+				790FCBC729CB27FF00EB936E /* ActionItem.swift */,
+			);
+			path = EditView;
+			sourceTree = "<group>";
+		};
+		7967C40929E465B30074E426 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				790FCBA229C9B8E900EB936E /* EuroDiffusion.entitlements */,
+				790FCB9929C9B8E800EB936E /* EuroDiffusionApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		7967C40A29E465BA0074E426 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				790FCB9B29C9B8E800EB936E /* ContentView.swift */,
+				790FCBC629CB27F300EB936E /* EditView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7967C40B29E465D10074E426 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7967C40D29E467230074E426 /* Config.swift */,
+				7967C41229E467C20074E426 /* City.swift */,
+				7967C41429E4680B0074E426 /* Country.swift */,
+				7967C41629E468B90074E426 /* DiffusionManager.swift */,
+				7967C41A29E46BFE0074E426 /* EuroDiffusionViewModel.swift */,
+				7967C41C29E46C360074E426 /* DiffusionCoder.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7967C40C29E465DF0074E426 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				790FCB9D29C9B8E900EB936E /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7967C40F29E4672F0074E426 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				7967C41029E467470074E426 /* Collection+SafeSubscript.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		790FCB9529C9B8E800EB936E /* EuroDiffusion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 790FCBBB29C9B8EA00EB936E /* Build configuration list for PBXNativeTarget "EuroDiffusion" */;
+			buildPhases = (
+				790FCB9229C9B8E800EB936E /* Sources */,
+				790FCB9329C9B8E800EB936E /* Frameworks */,
+				790FCB9429C9B8E800EB936E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EuroDiffusion;
+			productName = EuroDiffusion;
+			productReference = 790FCB9629C9B8E800EB936E /* EuroDiffusion.app */;
+			productType = "com.apple.product-type.application";
+		};
+		790FCBA629C9B8EA00EB936E /* EuroDiffusionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 790FCBBE29C9B8EA00EB936E /* Build configuration list for PBXNativeTarget "EuroDiffusionTests" */;
+			buildPhases = (
+				790FCBA329C9B8EA00EB936E /* Sources */,
+				790FCBA429C9B8EA00EB936E /* Frameworks */,
+				790FCBA529C9B8EA00EB936E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				790FCBA929C9B8EA00EB936E /* PBXTargetDependency */,
+			);
+			name = EuroDiffusionTests;
+			productName = EuroDiffusionTests;
+			productReference = 790FCBA729C9B8EA00EB936E /* EuroDiffusionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		790FCBB029C9B8EA00EB936E /* EuroDiffusionUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 790FCBC129C9B8EA00EB936E /* Build configuration list for PBXNativeTarget "EuroDiffusionUITests" */;
+			buildPhases = (
+				790FCBAD29C9B8EA00EB936E /* Sources */,
+				790FCBAE29C9B8EA00EB936E /* Frameworks */,
+				790FCBAF29C9B8EA00EB936E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				790FCBB329C9B8EA00EB936E /* PBXTargetDependency */,
+			);
+			name = EuroDiffusionUITests;
+			productName = EuroDiffusionUITests;
+			productReference = 790FCBB129C9B8EA00EB936E /* EuroDiffusionUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		790FCB8E29C9B8E800EB936E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					790FCB9529C9B8E800EB936E = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					790FCBA629C9B8EA00EB936E = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 790FCB9529C9B8E800EB936E;
+					};
+					790FCBB029C9B8EA00EB936E = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 790FCB9529C9B8E800EB936E;
+					};
+				};
+			};
+			buildConfigurationList = 790FCB9129C9B8E800EB936E /* Build configuration list for PBXProject "EuroDiffusion" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 790FCB8D29C9B8E800EB936E;
+			productRefGroup = 790FCB9729C9B8E800EB936E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				790FCB9529C9B8E800EB936E /* EuroDiffusion */,
+				790FCBA629C9B8EA00EB936E /* EuroDiffusionTests */,
+				790FCBB029C9B8EA00EB936E /* EuroDiffusionUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		790FCB9429C9B8E800EB936E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				790FCBA129C9B8E900EB936E /* Preview Assets.xcassets in Resources */,
+				790FCB9E29C9B8E900EB936E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		790FCBA529C9B8EA00EB936E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		790FCBAF29C9B8EA00EB936E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		790FCB9229C9B8E800EB936E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7967C41B29E46BFE0074E426 /* EuroDiffusionViewModel.swift in Sources */,
+				7967C41729E468B90074E426 /* DiffusionManager.swift in Sources */,
+				790FCBC829CB27FF00EB936E /* ActionItem.swift in Sources */,
+				790FCB9C29C9B8E800EB936E /* ContentView.swift in Sources */,
+				7967C41129E467470074E426 /* Collection+SafeSubscript.swift in Sources */,
+				7967C40E29E467230074E426 /* Config.swift in Sources */,
+				7967C41529E4680B0074E426 /* Country.swift in Sources */,
+				790FCB9A29C9B8E800EB936E /* EuroDiffusionApp.swift in Sources */,
+				790FCBC529CB26A000EB936E /* EditView.swift in Sources */,
+				7967C41329E467C20074E426 /* City.swift in Sources */,
+				7967C41D29E46C360074E426 /* DiffusionCoder.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		790FCBA329C9B8EA00EB936E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				790FCBAC29C9B8EA00EB936E /* EuroDiffusionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		790FCBAD29C9B8EA00EB936E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				790FCBB629C9B8EA00EB936E /* EuroDiffusionUITests.swift in Sources */,
+				790FCBB829C9B8EA00EB936E /* EuroDiffusionUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		790FCBA929C9B8EA00EB936E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 790FCB9529C9B8E800EB936E /* EuroDiffusion */;
+			targetProxy = 790FCBA829C9B8EA00EB936E /* PBXContainerItemProxy */;
+		};
+		790FCBB329C9B8EA00EB936E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 790FCB9529C9B8E800EB936E /* EuroDiffusion */;
+			targetProxy = 790FCBB229C9B8EA00EB936E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		790FCBB929C9B8EA00EB936E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		790FCBBA29C9B8EA00EB936E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		790FCBBC29C9B8EA00EB936E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EuroDiffusion/App/EuroDiffusion.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EuroDiffusion/Preview Content\"";
+				DEVELOPMENT_TEAM = G66XPV3HVM;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vpavlovskyi.EuroDiffusion;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		790FCBBD29C9B8EA00EB936E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EuroDiffusion/App/EuroDiffusion.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EuroDiffusion/Preview Content\"";
+				DEVELOPMENT_TEAM = G66XPV3HVM;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vpavlovskyi.EuroDiffusion;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		790FCBBF29C9B8EA00EB936E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G66XPV3HVM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vpavlovskyi.EuroDiffusionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EuroDiffusion.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EuroDiffusion";
+			};
+			name = Debug;
+		};
+		790FCBC029C9B8EA00EB936E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G66XPV3HVM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vpavlovskyi.EuroDiffusionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EuroDiffusion.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EuroDiffusion";
+			};
+			name = Release;
+		};
+		790FCBC229C9B8EA00EB936E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G66XPV3HVM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vpavlovskyi.EuroDiffusionUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = EuroDiffusion;
+			};
+			name = Debug;
+		};
+		790FCBC329C9B8EA00EB936E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G66XPV3HVM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vpavlovskyi.EuroDiffusionUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = EuroDiffusion;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		790FCB9129C9B8E800EB936E /* Build configuration list for PBXProject "EuroDiffusion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				790FCBB929C9B8EA00EB936E /* Debug */,
+				790FCBBA29C9B8EA00EB936E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		790FCBBB29C9B8EA00EB936E /* Build configuration list for PBXNativeTarget "EuroDiffusion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				790FCBBC29C9B8EA00EB936E /* Debug */,
+				790FCBBD29C9B8EA00EB936E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		790FCBBE29C9B8EA00EB936E /* Build configuration list for PBXNativeTarget "EuroDiffusionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				790FCBBF29C9B8EA00EB936E /* Debug */,
+				790FCBC029C9B8EA00EB936E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		790FCBC129C9B8EA00EB936E /* Build configuration list for PBXNativeTarget "EuroDiffusionUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				790FCBC229C9B8EA00EB936E /* Debug */,
+				790FCBC329C9B8EA00EB936E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 790FCB8E29C9B8E800EB936E /* Project object */;
+}
