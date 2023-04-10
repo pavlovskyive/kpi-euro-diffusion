@@ -18,5 +18,8 @@ struct DiffusionConfig {
     
     /// The grid size to use for organizing the cities.
     static let gridSize = 10
+    
+    /// Largest count of countries.
+    static let maxCountries = 20
 }
 
