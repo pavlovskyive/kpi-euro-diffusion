@@ -40,7 +40,7 @@ class EuroDiffusionViewModel: ObservableObject {
         }
         
         let group = DispatchGroup()
-        var results = Array(repeating: [DiffusionManager.State](), count: managers.count)
+        var results = Array(repeating: [CountryDiffusionState](), count: managers.count)
 
         // Run simulation asynchronously for each `DiffusionManager` in the array.
         for (index, manager) in managers.enumerated() {
