@@ -74,7 +74,7 @@ struct DiffusionCoder {
     ///
     /// - Parameter results: A two-dimensional array of simulation results.
     /// - Returns: A string containing the encoded results.
-    func encode(results: [[DiffusionManager.State]]) -> String {
+    func encode(results: [[CountryDiffusionState]]) -> String {
         var resultingString = ""
         
         // Make sure results array is not empty (there were no errors in process)
@@ -85,10 +85,18 @@ struct DiffusionCoder {
         // Append each case's results to the resulting string
         for (caseNumber, result) in results.enumerated() {
             resultingString.append("Case number \(caseNumber + 1)\n")
+            
+            let sortedResult = result.sorted { lhs, rhs -> Bool in
+                if lhs.dayCompleted != rhs.dayCompleted {
+                    return lhs.dayCompleted < rhs.dayCompleted
+                } else {
+                    return lhs.country.name < rhs.country.name
+                }
+            }
 
             // Append each country's results for the current case to the resulting string
-            for (country, days) in result {
-                resultingString.append("\(country.name) \(days)\n")
+            for countryState in sortedResult {
+                resultingString.append("\(countryState.country.name) \(countryState.dayCompleted)\n")
             }
         }
         

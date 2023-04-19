@@ -7,19 +7,28 @@
 
 import Foundation
 
+/// A struct that stores the diffusion state for each country.
+class CountryDiffusionState {
+    let country: Country
+    var dayCompleted: Int
+    
+    init(country: Country, dayCompleted: Int = -1) {
+        self.country = country
+        self.dayCompleted = dayCompleted
+    }
+}
+
 /// Manages the diffusion simulation across cities in multiple countries.
 class DiffusionManager {
-    /// A tupple that stores the diffusion state for each country.
-    typealias State = (Country, Int)
     
     /// The current diffusion state.
-    var state: [State]
+    private var state: [CountryDiffusionState]
     
     /// The set of countries being simulated.
-    var countries = Set<Country>()
+    private var countries = Set<Country>()
     
     /// The set of cities in all countries.
-    var cities = Set<City>()
+    private var cities = Set<City>()
     
     /// A Boolean value indicating whether the simulation has completed for all countries.
     var isComplete: Bool {
@@ -33,8 +42,10 @@ class DiffusionManager {
         self.cities = Set(countries.flatMap(\.cities))
 
         self.state = countries
-            .reduce(into: [State]()) { result, current in
-                result.append((current, -1))
+            .reduce(into: [CountryDiffusionState]()) { result, current in
+                let state = CountryDiffusionState(country: current)
+
+                result += [state]
             }
         
         assignCityBalances()
@@ -42,7 +53,7 @@ class DiffusionManager {
     }
     
     /// Assigns initial balances to all cities in all countries.
-    func assignCityBalances() {
+    private func assignCityBalances() {
         for city in cities {
             city.balances = countries
                 .reduce(into: [Country.Name: Int]()) { result, country in
@@ -58,7 +69,7 @@ class DiffusionManager {
     }
     
     /// Assigns neighbouring cities to all cities in all countries.
-    func assignCityNeighbours() {
+    private func assignCityNeighbours() {
         var grid: [[City?]] = Array(
             repeating: Array(repeating: nil, count: DiffusionConfig.gridSize),
             count: DiffusionConfig.gridSize
@@ -84,7 +95,7 @@ class DiffusionManager {
     }
     
     /// Performs a single iteration of the diffusion simulation.
-    func diffuse() {
+    private func diffuse() {
         for city in cities {
             for balance in city.balances {
                 let transferAmount = Int(balance.value / DiffusionConfig.representativePortion)
@@ -109,26 +120,29 @@ class DiffusionManager {
     
     /// Runs the diffusion simulation until all countries have reached a complete state.
     /// - Returns: A `Result` dictionary indicating the number of iterations it took for each country to reach a complete state.
-    func runSimulation() -> [State] {
-        var iterator = 0
+    func runSimulation() -> [CountryDiffusionState] {
+        var iterator = 1
         
         guard countries.count > 1 else {
             if let first = countries.first {
-                return [(first, 1)]
+                return [CountryDiffusionState(country: first, dayCompleted: 0)]
             }
-            
+
             return []
         }
         
         while !isComplete && iterator <= 10_000 { // Resolve stuck loop.
             diffuse()
-            iterator += 1
             
-            for index in state.indices {
-                if state[index].0.isComplete && state[index].1 == -1 {
-                    state[index].1 = iterator
-                }
+            let completedInCurrentIteration = state.filter { countryState in
+                countryState.country.isComplete && countryState.dayCompleted == -1
             }
+            
+            for countryState in completedInCurrentIteration {
+                countryState.dayCompleted = iterator
+            }
+            
+            iterator += 1
         }
         
         return state

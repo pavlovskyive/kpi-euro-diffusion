@@ -76,14 +76,14 @@ Belgium 1 1 2 2
 Output:
 ```
 Case number 1
-France 1325
 Spain 382
 Portugal 416
+France 1325
 Case number 2
-Luxembourg 1
+Luxembourg 0
 Case number 3
-Netherlands 2
 Belgium 2
+Netherlands 2
 ```
 
 # Screenshots
